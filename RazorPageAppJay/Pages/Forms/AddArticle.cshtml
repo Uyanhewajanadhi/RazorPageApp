@@ -1,0 +1,21 @@
+﻿@page
+@model RazorPageAppJay.Pages.Forms.AddArticleModel
+@{
+    ViewData["Title"] = "Add Article";
+}
+
+<h1> Add Article </h1>
+<form method="post">
+
+    <!-- asp-... are all helpers, that can be done with the input item -->
+    <!-- asp-for allows to point to a property in the Article Model.
+        So if that property is available, it can be displayed on the form-->
+    <input type="text" asp-for="Article.UserName" placeholder="UserName" /> <br/>
+    <br/><input type="text" asp-for="Article.BookName" placeholder="BookName" /><br/>
+    <br/><input type="text" asp-for="Article.Author" placeholder="Author" /><br/>
+    <br/><input type="text" asp-for="Article.Price" placeholder="Price" /><br/>
+
+    <!-- When we click on Submit, The data entered comes back to the page model -->
+    <br/><button type="submit">Submit</button>
+
+</form> 
